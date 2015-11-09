@@ -1,0 +1,28 @@
+<div class="jumbotron">
+  <h1>'Allo, 'Allo!</h1>
+  <p class="lead">
+    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
+    Always a pleasure scaffolding your apps.
+  </p>
+  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+</div>
+
+<div class="container">
+  <h2>My To Do List</h2>
+  <form role="form" ng-submit="addTodo()">
+    <div class="row">
+      <div class="input-group">
+        <input type="text" ng-model="todo" placeholder="What needs to be done?">
+        <span>
+          <input type="submit" class="btn btn-primary" value="Add">
+        </span>
+      </div>
+    </div>
+  </form>
+  <p class="form-group" ng-repeat="todo in listItems" ng-submit="removeTodo()">
+    <input type="text" ng-model="todo" class="form-control">
+    <span>
+      <input type="submit" class="btn btn-primary" value="Remove">
+    </span>
+  </p>
+</div>
